@@ -31,3 +31,14 @@ def gamma_fnc(n)
   return 1 if n - 1 <= 1
   (n - 1) * gamma_fnc(n - 1)
 end
+
+# Determines if the "ice cream shop" offers the user's favorite flavor.
+#
+# flavors - An array of the available flavors.
+# favorite - The user's favorite flavor.
+#
+# Returns true if favorite is offered and false otherwise.
+def ice_cream_shop(flavors, favorite)
+  return flavors.first == favorite if flavors.length <= 1
+  flavors.first == favorite || ice_cream_shop(flavors[1..-1], favorite)
+end
