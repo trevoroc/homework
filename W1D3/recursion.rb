@@ -42,3 +42,13 @@ def ice_cream_shop(flavors, favorite)
   return flavors.first == favorite if flavors.length <= 1
   flavors.first == favorite || ice_cream_shop(flavors[1..-1], favorite)
 end
+
+# Reverses the string.
+#
+# str - The string to reverse.
+#
+# Returns the reversed string.
+def reverse(str)
+  return str if str.length <= 1
+  reverse(str[1..-1]) + str[0]
+end
