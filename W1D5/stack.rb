@@ -12,7 +12,7 @@ class Stack
   #
   # Returns nothing.
   def add(el)
-
+    @stack.push(el)
   end
 
   # Public: Pops an element from the Stack.
