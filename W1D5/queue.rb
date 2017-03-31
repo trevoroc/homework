@@ -26,5 +26,6 @@ class Queue
   #
   # Returns the copy of this Queue.
   def show
+    self.dup
   end
 end
