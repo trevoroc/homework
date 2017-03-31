@@ -3,6 +3,7 @@ class Queue
 
   # Public: Initializes a new Queue.
   def initialize
+    @queue = []
   end
 
   # Public: Enqueues a new element to the Queue.
