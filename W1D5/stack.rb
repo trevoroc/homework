@@ -3,7 +3,7 @@ class Stack
 
   # Public: Initializes a new Stack.
   def initialize
-
+    @stack = []
   end
 
   # Public: Pushes a new element onto the Stack.
