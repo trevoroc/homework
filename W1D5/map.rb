@@ -31,6 +31,8 @@ class Map
   # Returns the value associated with key in this Map, or nil if the key does
   # not exist.
   def lookup(key)
+    @map.each { |k, v| return v if key == k }
+    nil
   end
 
   # Public: Removes a key-value pair from this Map.
