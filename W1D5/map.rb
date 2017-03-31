@@ -41,6 +41,7 @@ class Map
   #
   # Returns nothing.
   def remove(key)
+    @map.each { |pair| @map.delete(pair) if pair.first == key }
   end
 
   # Public: Creates a copy of this Map.
