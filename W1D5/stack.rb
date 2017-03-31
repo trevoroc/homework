@@ -19,6 +19,7 @@ class Stack
   #
   # Returns the element removed.
   def remove
+    @stack.pop(el)
   end
 
   # Public: Creates a copy of this Stack.
