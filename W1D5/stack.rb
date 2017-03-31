@@ -26,5 +26,6 @@ class Stack
   #
   # Returns a copy of the Stack.
   def show
+    self.dup
   end
 end
