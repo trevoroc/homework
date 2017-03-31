@@ -4,6 +4,7 @@ class Map
 
   # Public: Initializes a new Map.
   def initialize
+    @map = []
   end
 
   # Public: Adds a new key-value pair to this Map, or updates the value of an
