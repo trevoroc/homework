@@ -48,5 +48,6 @@ class Map
   #
   # Returns the copy of this Map.
   def show
+    self.dup
   end
 end
