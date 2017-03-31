@@ -15,6 +15,13 @@ class Map
   #
   # Returns nothing.
   def assign(key, value)
+    @map.each do |pair|
+      k, _ = pair
+      pair[1] = value if key == k
+      return
+    end
+
+    @map << [key, value]
   end
 
   # Public: Retrieves the value of a specific key.
