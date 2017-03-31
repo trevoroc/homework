@@ -17,8 +17,9 @@ class Queue
 
   # Public: Dequeues the first element from the Queue.
   #
-  # Returns the dequeued. element.
+  # Returns the dequeued element.
   def dequeue
+    @queue.shift
   end
 
   # Public: Creates a copy of this Queue.
