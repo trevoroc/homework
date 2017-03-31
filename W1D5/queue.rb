@@ -12,6 +12,7 @@ class Queue
   #
   # Returns nothing.
   def enqueue(el)
+    @queue.push(el)
   end
 
   # Public: Dequeues the first element from the Queue.
