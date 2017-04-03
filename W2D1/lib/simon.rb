@@ -12,7 +12,6 @@ class Simon
   end
 
   def play
-    # debugger
     system("clear")
     until game_over
       take_turn
@@ -20,7 +19,6 @@ class Simon
 
     game_over_message
     reset_game
-    play
   end
 
   def take_turn
