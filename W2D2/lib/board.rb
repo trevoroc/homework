@@ -20,7 +20,6 @@ class Board
   end
 
   def make_move(start_pos, current_player_name)
-    # debugger
     start_pos -= 1 if start_pos.between?(1, 6)
     skip = current_player_name == @names.first ? 13 : 6
 
