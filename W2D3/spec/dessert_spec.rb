@@ -35,7 +35,14 @@ describe Dessert do
   end
 
   describe "#mix!" do
-    it "shuffles the ingredient array"
+    before(:each) do
+      dessert.add_ingredient("flour")
+      dessert.add_ingredient("eggs")
+    end
+    it "shuffles the ingredient array" do
+      dessert.mix!
+      expect(dessert.ingredients).to match_array(%w(flour eggs))
+    end
   end
 
   describe "#eat" do
