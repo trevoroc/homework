@@ -6,7 +6,7 @@ Instructions: implement all of the pending specs (the `it` statements without bl
 =end
 
 describe Dessert do
-  subject(:dessert) { Dessert.new("cookie", 1, "Trevor") }
+  subject(:dessert) { Dessert.new("cookie", 10, "Trevor") }
   let(:chef) { double("chef") }
 
   describe "#initialize" do
@@ -46,9 +46,14 @@ describe Dessert do
   end
 
   describe "#eat" do
-    it "subtracts an amount from the quantity"
+    it "subtracts an amount from the quantity" do
+      dessert.eat(5)
+      expect(dessert.quantity).to eq(5)
+    end
 
-    it "raises an error if the amount is greater than the quantity"
+    it "raises an error if the amount is greater than the quantity" do
+      expect { dessert.eat(20) }.to raise_error("not enough left!")
+    end
   end
 
   describe "#serve" do
