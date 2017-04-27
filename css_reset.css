@@ -17,6 +17,8 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  background-color: floralwhite;
+  line-height: 1.5;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -25,9 +27,10 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1.5;
+  font-family: Arial, sans-serif;
 }
-ol, ul {
-  list-style: none;
+.ingredients-list {
+  list-style: square inside;
 }
 blockquote, q {
   quotes: none;
