@@ -83,7 +83,17 @@ input[type="radio"]:checked {
 }
 
 nav {
-  display: inline-block;
+  float: right;
+}
+
+header img {
+  float: left;
+}
+
+header:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 nav li {
