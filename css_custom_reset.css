@@ -1,0 +1,53 @@
+html, body, header, img, nav, ul, li, a, aside, h2, section, p, br, figure,
+figcaption, ol, form, label, input, select, option, textarea, footer {
+
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+
+  background: transparent;
+
+}
+
+input[type="radio"], select, input[type="submit"] {
+
+  cursor: pointer;
+  outline: none;
+
+}
+
+section input[type="submit"]:last-child {
+
+  background-color: gold;
+
+}
+
+section input[type="submit"]:last-child:hover {
+
+  -webkit-filter: brightness(90%);
+
+}
+
+ol li:nth-of-type(2n) {
+
+  background-color: lightgrey;
+
+}
+
+section[id="reviews"] + ol li:first-child {
+
+  border-style: solid;
+  border-top-width: 1px;
+
+}
+
+input[type="radio"] {
+
+  background-image: url(./stars.png);
+
+}
