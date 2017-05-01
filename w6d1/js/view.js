@@ -65,6 +65,10 @@ View.prototype.exercise5 = function () {
   //  'data-pos' of every square
 
   //your code here!
+  $("li").on("click", event => {
+    const $square = $(event.currentTarget);
+    alert(`${$square.data("pos")}`);
+  });
 };
 
 View.prototype.exercise6 = function () {
@@ -75,6 +79,10 @@ View.prototype.exercise6 = function () {
   //hint: use window._randomColorString() (defined at top) to get a random color!
 
   //your code here!
+
+  $("li").each(function (index) {
+    $(this).css("background-color", window._randomColorString());
+  });
 };
 
 View.prototype.exercise7 = function(){
@@ -85,6 +93,10 @@ View.prototype.exercise7 = function(){
   //rainbow.
 
   //your code here!
+  $("li").on("mouseenter", (event) => {
+    const $square = $(event.currentTarget);
+    alert($square.css("background-color"));
+  });
 };
 
 
