@@ -48,6 +48,14 @@ section[id="reviews"] + ol li:first-child {
 
 input[type="radio"] {
 
+  -webkit-appearance: none;
+  width: 27px;
+  height: 27px;
   background-image: url(./stars.png);
+  vertical-align: bottom;
 
+}
+
+input[type="radio"]:checked {
+  background-position: 30px 30px;
 }
