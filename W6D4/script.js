@@ -41,6 +41,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- your code here!
 
+  const togglePhotoForm = (e) => {
+    const formContainer = document.querySelector(".photo-form-container");
+    let classList = formContainer.className;
 
+    if (classList.includes("hidden")) {
+      formContainer.className = classList
+                                  .slice(0, classList.indexOf(" hidden"));
+    } else {
+      formContainer.className += " hidden";
+    }
+  };
+  
+  document.querySelector("button")
+    .addEventListener("click", togglePhotoForm);
 
 });
