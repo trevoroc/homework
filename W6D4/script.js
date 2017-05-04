@@ -19,11 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // adding SF places as list items
 
   // --- your code here!
-  /*
-  TODO: Define a function that will be a callback for a submit listener for
-  the form. Parse and save the input, clear the text box, and append the new
-  item to the list.
-  */
+
   const submitPlace = (e) => {
     e.preventDefault();
 
@@ -38,11 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ul.appendChild(li);
   };
 
-  /*
-  TODO: Add an event listener on the input element and give it the callback
-   defined above.
-  */
-  // debugger;
   document.querySelector(".list-container").querySelector("form")
     .addEventListener("submit", submitPlace);
 
