@@ -52,8 +52,27 @@ document.addEventListener("DOMContentLoaded", () => {
       formContainer.className += " hidden";
     }
   };
-  
+
   document.querySelector("button")
     .addEventListener("click", togglePhotoForm);
 
+  const addNewPhoto = (e) => {
+    e.preventDefault();
+
+    const urlInput = document.querySelector(".photo-url-input");
+    const url = urlInput.value;
+    urlInput.value = "";
+
+    const img = document.createElement("img");
+    img.src = url;
+
+    const li = document.createElement("li");
+    li.appendChild(img);
+
+    const ul = document.querySelector(".dog-photos");
+    ul.appendChild(li);
+  };
+
+  document.querySelector(".photo-url-submit")
+    .addEventListener("click", addNewPhoto);
 });
