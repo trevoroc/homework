@@ -11,6 +11,7 @@ class Calculator extends React.Component {
 
     this.setNum1 = this.setNum1.bind(this);
     this.setNum2 = this.setNum2.bind(this);
+    this.add = this.add.bind(this);
   }
 
   setNum1(e) {
@@ -23,15 +24,40 @@ class Calculator extends React.Component {
     this.setState({ num2: newNum2.value });
   }
 
+  coerce(numString) {
+    return numString === "" ? 0: parseInt(numString);
+  }
+
+  coerceNums() {
+    return [this.coerce(this.state.num1), this.coerce(this.state.num2)];
+  }
+
+  add(e) {
+    const nums = this.coerceNums();
+    this.setState({ result: nums[0] + nums[1]});
+  }
+
+  substract(e) {
+    const nums = this.coerceNums();
+    this.setState({ result: nums[0] - nums[1] });
+  }
+
   render() {
     console.log(this.state);
     return (
       <section>
         <input onChange={this.setNum1} id="num1"
          type="text" value={this.state.num1}/>
+
         <input onChange={this.setNum2} id="num2"
          type="text" value={this.state.num2}/>
+
         <br/>
+
+        <button onClick={this.add}>+</button>
+
+        <br/>
+
         <h1>{this.state.result}</h1>
       </section>
     );
