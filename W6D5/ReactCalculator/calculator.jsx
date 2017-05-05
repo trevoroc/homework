@@ -77,13 +77,15 @@ class Calculator extends React.Component {
   }
 
   render() {
+    const { num1: num1, num2: num2, result: result } = this.state;
+
     return (
       <section>
         <input onChange={this.setNum1} id="num1"
-         type="text" value={this.state.num1}/>
+         type="text" value={num1}/>
 
         <input onChange={this.setNum2} id="num2"
-         type="text" value={this.state.num2}/>
+         type="text" value={num2}/>
 
         <br/>
 
@@ -94,7 +96,7 @@ class Calculator extends React.Component {
 
         <br/>
 
-        <h1>{this.state.result}</h1>
+        <h1>{result}</h1>
 
         <br/>
 
