@@ -15,6 +15,7 @@ class Calculator extends React.Component {
     this.subtract = this.subtract.bind(this);
     this.multiply = this.multiply.bind(this);
     this.divide = this.divide.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   setNum1(e) {
@@ -69,8 +70,13 @@ class Calculator extends React.Component {
     this.setState({ result: nums[0] / nums[1] });
   }
 
+  reset(e) {
+    e.preventDefault();
+
+    this.setState({ num1: "", num2: "", result: 0 });
+  }
+
   render() {
-    console.log(this.state);
     return (
       <section>
         <input onChange={this.setNum1} id="num1"
@@ -89,6 +95,10 @@ class Calculator extends React.Component {
         <br/>
 
         <h1>{this.state.result}</h1>
+
+        <br/>
+
+        <button onClick={this.reset}>Clear</button>
       </section>
     );
   }
