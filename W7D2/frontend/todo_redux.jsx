@@ -4,16 +4,27 @@ import configureStore from './store/store';
 
 import Root from './components/root';
 
-const addLoggingToDispatch = store => {
-  const disp = store.dispatch;
-  return action => {
-    console.log(`Old state: ${store.getState()}`);
-    console.log(`Action: ${action}`);
+// const addLoggingToDispatchDumb = store => {
+//   const disp = store.dispatch;
+//   return action => {
+//     console.log(`Old state: ${store.getState()}`);
+//     console.log(`Action: ${action}`);
+//
+//     disp(action);
+//
+//     console.log(`New state: ${store.getState()}`);
+//   };
+// };
 
-    disp(action);
+const addLoggingToDispatch = store => next => action => {
+  console.log(`Old state: ${store.getState()}`);
+  console.log(`Action: ${action}`);
 
-    console.log(`New state: ${store.getState()}`);
-  };
+  let result = next(action);
+
+  console.log(`New state: ${store.getState()}`);
+
+  return result;
 };
 
 document.addEventListener('DOMContentLoaded', () => {
